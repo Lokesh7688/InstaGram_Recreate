@@ -7,8 +7,8 @@ class bar extends StatelessWidget {
       home: new Scaffold(
         appBar: AppBar(
           title: Image.network(
-            'https://www.brandinglosangeles.com/wp-content/uploads/Instagram_logo.svg.png',
-            height: 99.0,
+            '',
+            height: 9.0,
             width: 100.0,
           ),
         ),

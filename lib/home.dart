@@ -10,14 +10,15 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 20,
         title: Image.network(
           'https://www.higgidy.co.uk/sites/default/themes/custom/higgidy/assets/img/uploads/instagram-logo-text.png',
-          height: 110.0,
           width: 140.0,
+          fit: BoxFit.contain,
         ),
         actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(5, 5, 10, 5),
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
             child: IconButton(
               onPressed: () {},
               icon: Icon(
@@ -26,6 +27,9 @@ class _homeState extends State<home> {
                 size: 35.0,
               ),
             ),
+          ),
+          SizedBox(
+            width: 18.0,
           ),
         ],
       ),
