@@ -79,6 +79,20 @@ class _homeState extends State<home> {
           ),
         ],
       ),
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 15.0,
+            ),
+            Container(
+              width: double.infinity,
+              height: 100.0,
+              child: ListView.builder(itemBuilder: null),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
