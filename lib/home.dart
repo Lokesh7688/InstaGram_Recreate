@@ -11,10 +11,23 @@ class _homeState extends State<home> {
     return Scaffold(
       appBar: AppBar(
         title: Image.network(
-          'https://www.edigitalagency.com.au/wp-content/uploads/instagram-font-logo-white-png.png',
-          height: 100.0,
-          width: 100.0,
+          'https://www.higgidy.co.uk/sites/default/themes/custom/higgidy/assets/img/uploads/instagram-logo-text.png',
+          height: 110.0,
+          width: 140.0,
         ),
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(5, 5, 10, 5),
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.near_me,
+                color: Colors.white,
+                size: 35.0,
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 2,
