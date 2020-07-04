@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'usersstories.dart';
 
 class home extends StatefulWidget {
   @override
@@ -7,15 +8,30 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
   @override
-  final List<String> _stories = [
-    "https://pbs.twimg.com/profile_images/1226694019352154114/DDG9qPm0_400x400.jpg",
-    "https://pbs.twimg.com/profile_images/1247567101616746496/YuhgEjc__400x400.jpg",
-    "https://pbs.twimg.com/profile_images/1252291880383066113/D6W1qowt_400x400.jpg",
-    "https://pbs.twimg.com/profile_images/1226660746932523009/VLKnQgyd_400x400.jpg",
-    "https://pbs.twimg.com/profile_images/1226694019352154114/DDG9qPm0_400x400.jpg",
-    "https://pbs.twimg.com/profile_images/1247567101616746496/YuhgEjc__400x400.jpg",
-    "https://pbs.twimg.com/profile_images/1252291880383066113/D6W1qowt_400x400.jpg",
-    "https://pbs.twimg.com/profile_images/1226660746932523009/VLKnQgyd_400x400.jpg",
+  List<story> _stories = [
+    story(
+      "https://pbs.twimg.com/profile_images/1226694019352154114/DDG9qPm0_400x400.jpg",
+      "Your Story",
+    ),
+    story(
+      "https://pbs.twimg.com/profile_images/1247567101616746496/YuhgEjc__400x400.jpg",
+      "ShashiKant",
+    ),
+    story(
+      "https://pbs.twimg.com/profile_images/1252291880383066113/D6W1qowt_400x400.jpg",
+      "Harsh Khatri",
+    ),
+    story(
+      "https://pbs.twimg.com/profile_images/1226660746932523009/VLKnQgyd_400x400.jpg",
+      "Rohit Goyal",
+    ),
+    story(
+      "https://pbs.twimg.com/profile_images/1249811932070047744/dWK41SkM_400x400.jpg",
+      "Arvind Sharma",
+    ),
+    story(
+        "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_400x400.jpg",
+        "Narendra Modi"),
   ];
 
   Widget build(BuildContext context) {
@@ -55,39 +71,59 @@ class _homeState extends State<home> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 65,
+                height: 100,
                 margin: EdgeInsets.symmetric(
-                  vertical: 20.0,
+                  vertical: 10.0,
                 ),
                 child: ListView(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  children: _stories.map((image) {
-                    return Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: 5.0,
-                      ),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(40.0),
-                          border: Border.all(
-                            width: 1,
-                            color: Color(0xff0095B6),
-                          )),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(
-                          40.0,
-                        ),
-                        child: Image(
-                          image: NetworkImage(
-                            (image),
+                  children: _stories.map(
+                    (story) {
+                      return Column(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.symmetric(
+                              horizontal: 8.0,
+                            ),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(60.0),
+                                border: Border.all(
+                                  width: 2,
+                                  color: Color(0xff8e44ff),
+                                )),
+                            child: Container(
+                              padding: EdgeInsets.all(
+                                2.0,
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(
+                                  60.0,
+                                ),
+                                child: Image(
+                                  image: NetworkImage(
+                                    (story.image),
+                                  ),
+                                  height: 60,
+                                  width: 60,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
                           ),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    );
-                  }).toList(),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              story.username,
+                              style: TextStyle(fontSize: 10),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  ).toList(),
                 ),
-              )
+              ),
             ],
           ),
         ),

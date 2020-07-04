@@ -1,4 +1,4 @@
-#Sat Jul 04 00:07:49 PDT 2020
+#Sat Jul 04 04:42:17 PDT 2020
 base.0=C\:\\Users\\Laila_Ka_Majnu\\Desktop\\bottom_nav_flutter\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
