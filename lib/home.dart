@@ -1,4 +1,5 @@
 import 'package:bottom_nav_flutter/posts.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'usersstories.dart';
 
@@ -97,65 +98,68 @@ class _homeState extends State<home> {
         ],
       ),
       body: Container(
+        color: Colors.black,
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 100,
-                margin: EdgeInsets.symmetric(
-                  vertical: 10.0,
-                ),
-                child: ListView(
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  children: _stories.map(
-                    (story) {
-                      return Column(
-                        children: <Widget>[
-                          Container(
-                            margin: EdgeInsets.symmetric(
-                              horizontal: 8.0,
-                            ),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(60.0),
-                                border: Border.all(
-                                  width: 2,
-                                  color: Color(0xff8e4445),
-                                )),
-                            child: Container(
-                              padding: EdgeInsets.all(
-                                2.0,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(5, 10, 0, 0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 90,
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    children: _stories.map(
+                      (story) {
+                        return Column(
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.symmetric(
+                                horizontal: 10.0,
                               ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(
-                                  60.0,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50.0),
+                                  border: Border.all(
+                                    width: 2,
+                                    color: Color(0xff8e4445),
+                                  )),
+                              child: Container(
+                                padding: EdgeInsets.all(
+                                  2.0,
                                 ),
-                                child: Image(
-                                  image: NetworkImage(
-                                    (story.image),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(
+                                    50.0,
                                   ),
-                                  height: 60,
-                                  width: 60,
-                                  fit: BoxFit.cover,
+                                  child: Image(
+                                    image: NetworkImage(
+                                      (story.image),
+                                    ),
+                                    height: 50,
+                                    width: 50,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              story.username,
-                              style: TextStyle(fontSize: 10),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                story.username,
+                                style: TextStyle(fontSize: 10),
+                              ),
                             ),
-                          ),
-                        ],
-                      );
-                    },
-                  ).toList(),
+                          ],
+                        );
+                      },
+                    ).toList(),
+                  ),
                 ),
               ),
+              Divider(),
               Container(
+                color: Colors.black,
                 width: MediaQuery.of(context).size.width,
                 child: ListView.builder(
                   shrinkWrap: true,
@@ -168,6 +172,7 @@ class _homeState extends State<home> {
                           padding: EdgeInsets.symmetric(
                               horizontal: 10, vertical: 10),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(40.0),
@@ -178,10 +183,14 @@ class _homeState extends State<home> {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
                               Text(posts[index].Username),
+                              SizedBox(
+                                width: 130.0,
+                              ),
+                              IconButton(
+                                icon: Icon(Icons.more_vert),
+                                onPressed: () {},
+                              ),
                             ],
                           ),
                         ),
@@ -191,6 +200,33 @@ class _homeState extends State<home> {
                           ),
                           width: MediaQuery.of(context).size.width,
                         ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                IconButton(
+                                  icon: Icon(Icons.favorite_border),
+                                  onPressed: () {},
+                                ),
+                                IconButton(
+                                  icon: Icon(Icons.chat_bubble_outline),
+                                  onPressed: () {},
+                                ),
+                                IconButton(
+                                  icon: Icon(Icons.send),
+                                  onPressed: () {},
+                                ),
+                              ],
+                            ),
+                            IconButton(
+                              icon: Icon(Icons.bookmark_border),
+                              onPressed: () {},
+                              iconSize: 35,
+                            ),
+                          ],
+                        ),
+                        Text('Liked by')
                       ],
                     ),
                   ),
