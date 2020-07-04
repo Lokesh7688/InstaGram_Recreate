@@ -7,6 +7,17 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
   @override
+  final List<String> _stories = [
+    "https://pbs.twimg.com/profile_images/1226694019352154114/DDG9qPm0_400x400.jpg",
+    "https://pbs.twimg.com/profile_images/1247567101616746496/YuhgEjc__400x400.jpg",
+    "https://pbs.twimg.com/profile_images/1252291880383066113/D6W1qowt_400x400.jpg",
+    "https://pbs.twimg.com/profile_images/1226660746932523009/VLKnQgyd_400x400.jpg",
+    "https://pbs.twimg.com/profile_images/1226694019352154114/DDG9qPm0_400x400.jpg",
+    "https://pbs.twimg.com/profile_images/1247567101616746496/YuhgEjc__400x400.jpg",
+    "https://pbs.twimg.com/profile_images/1252291880383066113/D6W1qowt_400x400.jpg",
+    "https://pbs.twimg.com/profile_images/1226660746932523009/VLKnQgyd_400x400.jpg",
+  ];
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -18,7 +29,7 @@ class _homeState extends State<home> {
         ),
         actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+            padding: const EdgeInsets.all(0.0),
             child: IconButton(
               onPressed: () {},
               icon: Icon(
@@ -29,12 +40,60 @@ class _homeState extends State<home> {
             ),
           ),
           SizedBox(
-            width: 18.0,
+            width: 4.0,
           ),
         ],
       ),
+      body: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: 10,
+                ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 65,
+                margin: EdgeInsets.symmetric(
+                  vertical: 20.0,
+                ),
+                child: ListView(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  children: _stories.map((image) {
+                    return Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 5.0,
+                      ),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40.0),
+                          border: Border.all(
+                            width: 1,
+                            color: Color(0xff0095B6),
+                          )),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                          40.0,
+                        ),
+                        child: Image(
+                          image: NetworkImage(
+                            (image),
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 2,
+        currentIndex: 0,
         items: [
           BottomNavigationBarItem(
             icon: new Icon(
@@ -42,6 +101,9 @@ class _homeState extends State<home> {
             ),
             title: new Text(
               "Home",
+              style: TextStyle(
+                fontSize: 10,
+              ),
             ),
           ),
           BottomNavigationBarItem(
@@ -50,6 +112,9 @@ class _homeState extends State<home> {
             ),
             title: new Text(
               "Search",
+              style: TextStyle(
+                fontSize: 10,
+              ),
             ),
           ),
           BottomNavigationBarItem(
@@ -59,6 +124,9 @@ class _homeState extends State<home> {
             ),
             title: new Text(
               "Upload",
+              style: TextStyle(
+                fontSize: 10,
+              ),
             ),
           ),
           BottomNavigationBarItem(
@@ -67,6 +135,9 @@ class _homeState extends State<home> {
             ),
             title: new Text(
               "Notify",
+              style: TextStyle(
+                fontSize: 10,
+              ),
             ),
           ),
           BottomNavigationBarItem(
@@ -75,23 +146,12 @@ class _homeState extends State<home> {
             ),
             title: new Text(
               "profile",
+              style: TextStyle(
+                fontSize: 10,
+              ),
             ),
           ),
         ],
-      ),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            SizedBox(
-              height: 15.0,
-            ),
-            Container(
-              width: double.infinity,
-              height: 100.0,
-              child: ListView.builder(itemBuilder: null),
-            )
-          ],
-        ),
       ),
     );
   }
