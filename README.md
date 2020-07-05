@@ -30,7 +30,7 @@
 ## About The Project
 
 
-![alt text](https://github.com/Lokesh7688/Instagram_UI_Recreate/blob/master/images/screenshot.png)![alt text](https://github.com/Lokesh7688/Instagram_UI_Recreate/blob/master/images/screenshot1.png)
+![alt text](https://github.com/Lokesh7688/Instagram_UI_Recreate/blob/master/images/screenshot.png)![alt text](https://github.com/Lokesh7688/Instagram_UI_Recreate/blob/master/images/screenshot1.jpeg)
 
 
 
