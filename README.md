@@ -1,5 +1,4 @@
 
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
@@ -28,8 +27,8 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
 ## About The Project
+
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
