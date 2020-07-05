@@ -298,30 +298,47 @@ class _homeState extends State<home> {
                                   text: "View all 100 comments",
                                   style: TextStyle(color: Colors.grey),
                                 ),
-                                TextSpan(
-                                  text: 'Add comment',
-                                  style: TextStyle(color: Colors.grey),
-                                ),
                               ],
                             ),
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(
-                            horizontal: 14,
-                            vertical: 5,
-                          ),
+                          margin: EdgeInsets.fromLTRB(14, 0, 80, 0),
                           width: MediaQuery.of(context).size.width,
-                          child: RichText(
-                            softWrap: true,
-                            overflow: TextOverflow.visible,
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: 'Add comment',
-                                  style: TextStyle(color: Colors.grey),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(40.0),
+                                child: Image(
+                                  image: NetworkImage(posts[index].UserImage),
+                                  width: 25,
+                                  height: 25,
+                                  fit: BoxFit.cover,
                                 ),
-                              ],
+                              ),
+                              Text(
+                                "Add Comments....",
+                                style: TextStyle(
+                                  fontStyle: FontStyle.normal,
+                                  fontSize: 13,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 120.0,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(14, 8, 270, 0),
+                          child: Text(
+                            "50 Minutes ago",
+                            style: TextStyle(
+                              fontStyle: FontStyle.normal,
+                              fontSize: 10,
+                              color: Colors.grey,
                             ),
                           ),
                         ),
