@@ -40,7 +40,6 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]]
-[![Product Name Screen Shot][product-screenshot1]]
 
 
 ### Built With
