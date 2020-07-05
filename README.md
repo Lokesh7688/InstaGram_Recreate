@@ -30,7 +30,7 @@
 ## About The Project
 
 
-![alt text](http://url/to/screenshot.png)
+![alt text](https://github.com/Lokesh7688/Instagram_UI_Recreate/blob/master/images/screenshot.png)
 
 
 ### Built With
