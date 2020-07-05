@@ -106,7 +106,7 @@ class _homeState extends State<home> {
                 padding: const EdgeInsets.fromLTRB(5, 10, 0, 0),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 90,
+                  height: 80,
                   child: ListView(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
@@ -116,7 +116,7 @@ class _homeState extends State<home> {
                           children: <Widget>[
                             Container(
                               margin: EdgeInsets.symmetric(
-                                horizontal: 10.0,
+                                horizontal: 12.0,
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(50.0),
@@ -144,7 +144,7 @@ class _homeState extends State<home> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(5.0),
                               child: Text(
                                 story.username,
                                 style: TextStyle(fontSize: 10),
@@ -169,17 +169,18 @@ class _homeState extends State<home> {
                     child: Column(
                       children: <Widget>[
                         Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 10),
+                          padding: EdgeInsets.fromLTRB(14, 0, 5, 10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               ClipRRect(
-                                borderRadius: BorderRadius.circular(40.0),
+                                borderRadius: BorderRadius.circular(
+                                  35.0,
+                                ),
                                 child: Image(
                                   image: NetworkImage(posts[index].UserImage),
-                                  width: 40,
-                                  height: 40,
+                                  width: 35,
+                                  height: 35,
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -206,7 +207,8 @@ class _homeState extends State<home> {
                             Row(
                               children: <Widget>[
                                 IconButton(
-                                  icon: Icon(Icons.favorite_border),
+                                  color: Colors.red,
+                                  icon: Icon(Icons.favorite),
                                   onPressed: () {},
                                 ),
                                 IconButton(
