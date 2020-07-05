@@ -42,32 +42,32 @@ class _homeState extends State<home> {
       UserImage:
           "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_400x400.jpg",
       PostedImage:
-          "https://instagram.fjai1-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s750x750/106470626_683362015839983_8411456334679807048_n.jpg?_nc_ht=instagram.fjai1-2.fna.fbcdn.net&_nc_cat=1&_nc_ohc=Qihxfe5hRmUAX9835jO&oh=eb0f10e8bcf5d63a02bdef3ad008f5f2&oe=5F29AC8E",
+          "https://static.telegraphindia.com/derivative/THE_TELEGRAPH/1678939/16X9/image94e33f65-eaaa-43f3-bcb4-3739d2300cf8.jpg",
       ImageText: "Indian Army is Love",
     ),
     post(
       Username: "ShashiKant",
       UserImage:
-          "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_400x400.jpg",
-      PostedImage:
           "https://pbs.twimg.com/profile_images/1247567101616746496/YuhgEjc__400x400.jpg",
-      ImageText: "Indian Army is Love",
+      PostedImage:
+          "https://www.telegraph.co.uk/content/dam/art/2016/10/04/picasso-xlarge_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwbKTcqHAsmNzJMPMiov7fpk.jpg",
+      ImageText: "Developing my self to become developer",
     ),
     post(
       Username: "Harsh_Khatri",
       UserImage:
-          "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_400x400.jpg",
+          "https://pbs.twimg.com/profile_images/1252291880383066113/D6W1qowt_400x400.jpg",
       PostedImage:
-          "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_400x400.jpg",
-      ImageText: "Indian Army is Love",
+          "https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photos/8396907/my-guernica-susana-varela-guillot.jpg?1478488648",
+      ImageText: "Complited Lots of certificates. ^_^' ",
     ),
     post(
       Username: "Rohit_Goyal",
       UserImage:
-          "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_400x400.jpg",
+          "https://pbs.twimg.com/profile_images/1226660746932523009/VLKnQgyd_400x400.jpg",
       PostedImage:
-          "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_400x400.jpg",
-      ImageText: "Indian Army is Love",
+          "https://i.pinimg.com/originals/46/0a/b0/460ab011fede084cc3680bf473784dc0.jpg",
+      ImageText: "learning every day",
     ),
   ];
 
@@ -226,7 +226,105 @@ class _homeState extends State<home> {
                             ),
                           ],
                         ),
-                        Text('Liked by')
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                            horizontal: 14,
+                          ),
+                          width: MediaQuery.of(context).size.width,
+                          child: RichText(
+                              softWrap: true,
+                              overflow: TextOverflow.visible,
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(text: "Liked by "),
+                                  TextSpan(
+                                      text: " Rahul_gandhi, ",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      )),
+                                  TextSpan(
+                                    text: " Sonia_gandhi, ",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                      text: "and ",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      )),
+                                  TextSpan(
+                                    text: "1220 Others ",
+                                  ),
+                                ],
+                              )),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                            horizontal: 14,
+                            vertical: 5,
+                          ),
+                          width: MediaQuery.of(context).size.width,
+                          child: RichText(
+                            softWrap: true,
+                            overflow: TextOverflow.visible,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                    text: posts[index].Username,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                                TextSpan(
+                                  text: ' ${posts[index].ImageText}',
+                                  style: TextStyle(),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                            horizontal: 14,
+                            vertical: 5,
+                          ),
+                          width: MediaQuery.of(context).size.width,
+                          child: RichText(
+                            softWrap: true,
+                            overflow: TextOverflow.visible,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: "View all 100 comments",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                TextSpan(
+                                  text: 'Add comment',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                            horizontal: 14,
+                            vertical: 5,
+                          ),
+                          width: MediaQuery.of(context).size.width,
+                          child: RichText(
+                            softWrap: true,
+                            overflow: TextOverflow.visible,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'Add comment',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
