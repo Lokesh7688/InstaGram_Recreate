@@ -30,7 +30,7 @@
 ## About The Project
 
 
-[[![Product Name Screen Shot][product-screenshot]]](https://example.com)
+![alt text](http://url/to/screenshot.png)
 
 
 ### Built With
