@@ -223,9 +223,100 @@ class _userprofileState extends State<userprofile> {
               ],
             ),
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[],
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Column(
+                      children: <Widget>[
+                        Icon(
+                          Icons.add_circle,
+                          size: 80.0,
+                          color: Color(0xff64B5F6),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              "New",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Color(0xff64B5F6),
+                            child: CircleAvatar(
+                              backgroundColor: Color(0xff09031d),
+                              radius: 28,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Color(0xff64B5F6),
+                            child: CircleAvatar(
+                              backgroundColor: Color(0xff09031d),
+                              radius: 28,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Color(0xff64B5F6),
+                            child: CircleAvatar(
+                              backgroundColor: Color(0xff09031d),
+                              radius: 28,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Column(
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Color(0xff64B5F6),
+                            child: CircleAvatar(
+                              backgroundColor: Color(0xff09031d),
+                              radius: 28,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Divider(
+            color: Colors.white,
           )
         ],
       ),
